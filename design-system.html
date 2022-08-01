@@ -16,29 +16,36 @@
 
     <link rel="stylesheet" href="style.css">
 
-    
+
 
 </head>
 
 <body>
-
+    <!-- Main section were all content should be -->
     <main>
-        <div class="container">
-            <h1> Design System</h1>
-            <section id="colors" style="margin: 4rem 0 ;">
-                <h2 class="numbered-title"><span>01</span> colors</h2>
+        <!-- 00 Inital container w/ title -->
+        <div class="container" style="margin-top: 4.7rem ;">
+            <h1 class="text-light ff-sans-cond letter-spacing-1 uppercase" style="font-size: 1.5rem; text-align:end;">
+                Design System</h1>
 
+            <!-- 01 Colores section  -->
+            <section class="flow" id="colors" style="margin: 4rem 0; --flow-space:1rem;">
+                <h2 class="numbered-title" style="margin-bottom: 3rem;"><span>01</span> colors</h2>
+                <!-- 01 A Dark Color Box w/ Values-->
                 <div class="flex">
-                    <div style="flex-grow: 1;">
+                    <div class="flow" style="flex-grow: 1;">
                         <div>
-                            <div class="text-light bg-dark ff-serif fs-500" style="padding: 3rem 1rem 1rem; border: 1px solid white">
+                            <div class="text-light bg-dark ff-serif fs-500"
+                                style="padding: 3rem 1rem 1rem; border: 1px solid white">
                                 #0B0D17
                             </div>
                         </div>
                         <p><span class="text-light">RGB</span> 11, 13, 23</p>
                         <p><span class="text-light">HSL</span> 230°, 35%, 7%</p>
                     </div>
-                    <div style="flex-grow: 1;">
+
+                    <!-- 01 B Light Color Box w/ Values-->
+                    <div class="flow" style="flex-grow: 1;">
                         <div>
                             <div class="text-dark bg-light ff-serif fs-500" style="padding: 3rem 1rem 1rem; "> #D0D6F9
                             </div>
@@ -46,7 +53,9 @@
                         <p><span class="text-light">RGB</span> 208, 214, 249</p>
                         <p><span class="text-light">HSL</span> 231°, 77%, 90%</p>
                     </div>
-                    <div style="flex-grow: 1;">
+
+                    <!-- 01 C White Color Box w/ Values-->
+                    <div class="flow" style="flex-grow: 1;">
                         <div>
                             <div class="text-dark bg-white ff-serif fs-500" style="padding: 3rem 1rem 1rem;"> #0B0D17
                             </div>
@@ -56,54 +65,103 @@
                     </div>
                 </div>
             </section>
-
-            <section id="typography"  style="margin: 4rem 0">
-                <h2 class="numbered-title"><span>02 </span>Typography</h2>
+            <!-- 02 Typography section -->
+            <section class="flow" id="typography" style="margin: 4rem 0;--flow-space:1.5rem; margin-top: 9rem;">
+                <h2 class="numbered-title" style="margin-bottom:48px;"><span>02 </span>Typography</h2>
                 <div class="flex">
-                    <div style="flex-basis: 100%">
-                        <div> 
+                    <!-- 02 A Heading 1 -->
+                    <div class="flow" style="flex-basis: 100%; --flow-space:1.5rem;">
+                        <div>
                             <p class="text-light">Heading 1 - Bellefair Regular - 150px</p>
                             <p class="ff-serif fs-900 uppercase">Earth</p>
                         </div>
-                        <div> 
+                        <div>
                             <p class="text-light">Heading 2 - Bellefair Regular - 100px</p>
                             <p class="ff-serif fs-800 uppercase">Venus</p>
                         </div>
-                        <div> 
+                        <div>
                             <p class="text-light">Heading 3 - Bellefair Regular - 56px</p>
                             <p class="ff-serif fs-700 uppercase">Jupiter & Saturn</p>
                         </div>
-                        <div> 
+                        <div>
                             <p class="text-light">Heading 4 - Bellefair Regular - 32px</p>
                             <p class="ff-serif fs-600 uppercase">Uranus, Neptune, & Pluto</p>
                         </div>
-                        <div> 
-                            <p class="text-light">Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character Space</p>
-                            <p class="ff-sans-cond fs-500 letter-spacing-1 uppercase text-light">So, you want to travel to space</p>
+                        <div>
+                            <p class="text-light">Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character Space
+                            </p>
+                            <p class="ff-sans-cond fs-500 letter-spacing-1 uppercase text-light">So, you want to travel
+                                to space</p>
                         </div>
-                    
+
                     </div>
-                    
-                    <div  style="flex-basis: 100%">
-                        <div> 
+                    <!-- 02 B Subheadings and body -->
+                    <div class="flow" style="flex-basis: 100%; --flow-space:2.5rem;">
+                        <div>
                             <p class="text-light">Subheading 1 - Bellefair Regular - 28px</p>
                             <p class="ff-serif fs-500 uppercase">384,400 km</p>
                         </div>
-                        <div> 
-                            <p class="text-light">Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character Space</p>
+                        <div>
+                            <p class="text-light">Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character
+                                Space</p>
                             <p class="ff-sans-cond fs-200 letter-spacing-3 uppercase">Avg. Distance</p>
                         </div>
-                        <div> 
+                        <div>
                             <p class="text-light">Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space</p>
                             <p class="ff-sans-cond fs-300 letter-spacing-2 uppercase">Europa</p>
                         </div>
-                        <div> 
+                        <div>
                             <p class="text-light">Body Text</p>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. </p>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.
+                                Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel,
+                                nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget
+                                blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum
+                                dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet
+                                nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
+                                ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor
+                                eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet,
+                                consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.
+                                In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. </p>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- 03 Interactive section -->
+            <section class="flow" id="Interactive-Elements">
+                <h2 class="numbered-title" style="margin-bottom:3rem;"><span>03 </span>Interactive Elements</h2>
+
+                <!-- 03 A Navegation -->
+                <div>
+                    <nav>
+                        <ul class="primary-navigation underline-indicators flex">
+                            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>00</span> Active</a>
+                            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span> Hovered</a>
+                            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span> Idle</a>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="flex">
+
+
+                    <div style="margin-top: 3rem;">
+                        <!-- 03 B Explore Button -->
+                        <a href="#" class="large-button uppercase ff-serif fs text-dark bg-white fs-600">Explore</a>
+                    </div>
+                </div>
+
+                <div style="margin-bottom:50vh;"></div>
+
+                <!-- 03 C Tabs -->
+
+                <!-- 03 D Dots -->
+
+                <!-- 03 E Numbers -->
+
+
+            </section>
+
+
 
         </div>
     </main>

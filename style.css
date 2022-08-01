@@ -102,6 +102,8 @@ select {
 /* Utility Classes       */
 /* --------------------- */
 
+/*         General        */
+/* --------------------- */
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -110,6 +112,11 @@ select {
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+  /* outline: 1px solid red;  */
 }
 
 .container {
@@ -130,7 +137,8 @@ select {
   border: 0;
 }
 
-/*  Colores */
+/*          Colores         */
+/* --------------------- */
 .bg-dark {
   background-color: hsl(var(--clr-dark));
 }
@@ -151,7 +159,9 @@ select {
   color: hsl(var(--clr-White));
 }
 
-/* typography */
+/*      typography      */
+/* --------------------- */
+
 .ff-serif {
   font-family: var(--ff-Bellefair);
 }
@@ -208,8 +218,9 @@ select {
   line-height: 1.1;
 }
 
+/*    numbered title    */
+/* --------------------- */
 
-/* numbered tittle */
 .numbered-title {
   font-family: var(--ff-Barlow-cond);
   font-size: var(--fs-500);
@@ -218,7 +229,73 @@ select {
 }
 
 .numbered-title span {
-  margin-right: .5em;
+  margin-right: 0.5em;
   font-weight: 700;
   color: hsla(0, 0%, 100%, 0.25);
+}
+
+
+
+/* ----------------------------- */
+/*           Componets           */
+/* ----------------------------- */
+
+
+/* button section */
+.large-button{
+  position: relative;
+  display: grid;
+  z-index: 1;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-decoration: none;
+  transition: transform 750ms ease-in-out;
+}
+
+.large-button:hover{
+  transform: scale(1.05);
+}
+
+.large-button::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: hsla(0, 0%, 100%, 0.15);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition:opacity 500ms linear, transform 750ms ease-in-out;
+  filter: blur(2px);
+  box-shadow: inset 0 0  10px hsla(0, 0%, 100%, 0.1);
+}
+
+.large-button:hover::after,
+.large-button:focus::after{
+  opacity: 1;
+  transform: scale(1.4);
+}
+
+/* Navagation */
+
+.primary-navigation {
+  --gap: 8rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: .5em;
+}
+
+.underline-indicators{
+  
 }
