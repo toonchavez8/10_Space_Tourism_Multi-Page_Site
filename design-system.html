@@ -127,38 +127,56 @@
                 </div>
             </section>
             <!-- 03 Interactive section -->
-            <section class="flow" id="Interactive-Elements">
-                <h2 class="numbered-title" style="margin-bottom:3rem;"><span>03 </span>Interactive Elements</h2>
+            <section class="flow flex" id="Interactive-Elements" style="flex-direction: column; align-items: center;">
+                <h2 class="numbered-title" style="margin-bottom:3rem; align-self: flex-start;"><span>03
+                    </span>Interactive Elements</h2>
 
                 <!-- 03 A Navegation -->
-                <div>
+                <div >
                     <nav>
-                        <ul class="primary-navigation underline-indicators flex">
-                            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>00</span> Active</a>
+                        <ul class="primary-navigation underline-indicators flex" >
+                            <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span>00</span>
+                                    Active</a>
                             <li><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span> Hovered</a>
                             <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span> Idle</a>
                         </ul>
                     </nav>
                 </div>
 
-                <div class="flex">
+                <div class="flex" style="gap: 25rem; padding:5rem;">
 
-
+                    <!-- 03 B Explore Button -->
                     <div style="margin-top: 3rem;">
-                        <!-- 03 B Explore Button -->
                         <a href="#" class="large-button uppercase ff-serif fs text-dark bg-white fs-600">Explore</a>
                     </div>
+
+
+                    <div class="flow" style="margin-bottom:6vh; --flow-space:4rem">
+
+                        <!-- 03 C Tabs -->
+                        <div class="tab-list underline-indicators flex">
+                            <button aria-selected="true"
+                                class="uppercase text-light letter-spacing-2 bg-dark ff-sans-cond ">Moon</button>
+                            <button aria-selected="false"
+                                class="uppercase text-light letter-spacing-2 bg-dark ff-sans-cond ">Mars</button>
+                            <button aria-selected="false"
+                                class="uppercase text-light letter-spacing-2 bg-dark ff-sans-cond ">Europa</button>
+                        </div>
+                        <!-- 03 D Dots -->
+                        <div class="dot-indicators  flex">
+                            <button aria-selected="true"><span class="sr-only">slide title</span></button>
+                            <button aria-selected="false"><span class="sr-only">slide title</span></button>
+                            <button aria-selected="false"><span class="sr-only">slide title</span></button>
+                        </div>
+
+                        <!-- 03 E Numbers -->
+                        <div class="numbered-indicators flex" style="flex-direction: column;">
+                            <button aria-selected="true" class="uppercase text-light ff-serif fs-600 ">1</button>
+                            <button aria-selected="false" class="uppercase text-light ff-serif  fs-600 ">2</button>
+                            <button aria-selected="false" class="uppercase text-light ff-serif fs-600  ">3</button>
+                        </div>
+                    </div>
                 </div>
-
-                <div style="margin-bottom:50vh;"></div>
-
-                <!-- 03 C Tabs -->
-
-                <!-- 03 D Dots -->
-
-                <!-- 03 E Numbers -->
-
-
             </section>
 
 
