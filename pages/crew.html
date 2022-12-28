@@ -18,7 +18,9 @@
   <!-- Css Linking -->
   <link rel="stylesheet" href="/style.css">
   <!-- javascript link defer  -->
-  <script src="/index.js" defer></script>
+  <script src="/navegation.js" defer></script>
+  <script src="./tabs.js" defer></script>
+
 
   <title>Frontend Mentor | Space tourism website</title>
 </head>
@@ -66,13 +68,27 @@
   <main id="main" class="grid-container grid-container--crew flow">
     <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
     <!-- 03 D Dots -->
-    <div class="dot-indicators  flex">
-      <button aria-selected="true"><span class="sr-only">The Commander</span></button>
-      <button aria-selected="false"><span class="sr-only">The Mission Specialist</span></button>
-      <button aria-selected="false"><span class="sr-only">The Pilot</span></button>
-      <button aria-selected="false"><span class="sr-only">The crew engineer</span></button>
+    <div class="dot-indicators  flex" role="tablist" aria-label="crew member list">
+      <button aria-selected="true" role="tab" aria-controls="commander-tab" data-image="commander-image"
+        tabindex="0"><span class="sr-only">The
+          Commander</span></button>
+
+      <button aria-selected="false" role="tab" aria-controls="mission-tab" data-image="mission-image"
+        tabindex="-1"><span class="sr-only">The
+          Mission
+          Specialist</span></button>
+
+      <button aria-selected="false" role="tab" aria-controls="pilot-tab" data-image="pilot-image" tabindex="-1"><span
+          class="sr-only">The
+          Pilot</span></button>
+
+      <button aria-selected="false" role="tab" aria-controls="crew-tab" data-image="crew-image" tabindex="-1"><span
+          class="sr-only">The crew
+          engineer</span></button>
     </div>
-    <article class="crew-details flow">
+
+    <!-- 01 comander -->
+    <article class="crew-details flow" id="commander-tab" role="tabpanel" tabindex="0">
       <header class="flow flow-space--small">
         <h2 class="fs-600 ff-serif uppercase">Commander</h2>
         <p class="fs-700 uppercase ff-serif">Douglas Hurley</p>
@@ -82,10 +98,57 @@
         commander of Crew Dragon Demo-2.</p>
     </article>
 
-    <picture>
+    <!-- 02 mission specialist -->
+    <article hidden class="crew-details flow" id="mission-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow-space--small">
+        <h2 class="fs-600 ff-serif uppercase">Mission Specialist</h2>
+        <p class="fs-700 uppercase ff-serif">Mark Shuttleworth</p>
+      </header>
+      <p> Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind
+        the Linux-based Ubuntu operating system. Shuttleworth became the first South
+        African to travel to space as a space tourist.</p>
+    </article>
+
+    <!-- 03 pilot -->
+    <article hidden class="crew-details flow" id="pilot-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow-space--small">
+        <h2 class="fs-600 ff-serif uppercase">Pilot</h2>
+        <p class="fs-700 uppercase ff-serif"> Victor Glover</p>
+      </header>
+      <p> Pilot on the first operational flight of the SpaceX Crew Dragon to the
+        International Space Station. Glover is a commander in the U.S. Navy where
+        he pilots an F/A-18.He was a crew member of Expedition 64, and served as a
+        station systems flight engineer. </p>
+    </article>
+
+    <!-- 04 crew engineer -->
+    <article hidden class="crew-details flow" id="crew-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow-space--small">
+        <h2 class="fs-600 ff-serif uppercase">Flight Engineer</h2>
+        <p class="fs-700 uppercase ff-serif"> Anousheh Ansari</p>
+      </header>
+      <p> Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems.
+        Ansari was the fourth self-funded space tourist, the first self-funded woman to
+        fly to the ISS, and the first Iranian in space. </p>
+    </article>
+
+    <picture id="commander-image">
       <source srcset="../assets/crew/image-douglas-hurley.webp" type="image/webp">
       <img src="../assets/crew/image-douglas-hurley.png" alt="Douglas Hurley">
     </picture>
+    <picture hidden id="mission-image">
+      <source srcset="../assets/crew/image-mark-shuttleworth.webp" type="image/webp">
+      <img src="../assets/crew/image-mark-shuttleworth.png" alt="Douglas Hurley">
+    </picture>
+    <picture hidden id="pilot-image">
+      <source srcset="../assets/crew/image-victor-glover.webp" type="image/webp">
+      <img src="../assets/crew/image-victor-glover.png" alt="Douglas Hurley">
+    </picture>
+    <picture hidden id="crew-image">
+      <source srcset="../assets/crew/image-anousheh-ansari.webp" type="image/webp">
+      <img src="../assets/crew/image-anousheh-ansari.png" alt="Douglas Hurley">
+    </picture>
+
 
   </main>
 </body>
